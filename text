@@ -1,0 +1,26 @@
+{/* {session ||session ? (
+                  <>
+                  logged in
+                    <Link href="startup/create">
+                      <span>Create</span>
+                    </Link>
+
+                    <form action={async()=>{
+                      await signOut({redirectTo:"/"})
+                    }}>
+                          Signout
+                    </form>
+
+                    <Link href={`/user/`}>
+                      <span>{session?.user?.name}</span>
+                    </Link>
+                  </>
+                ):(
+                  <form action={async()=>{
+                    "use server";
+
+                    await signIn('github');
+                  }}>
+                      <button type='submit'>Login</button>
+                  </form>
+                )} */}
